@@ -3,39 +3,31 @@ Plan donné au client à titre d'exemple
 jour 1: Intro et présentation du fonctionnement de maven + TPs "découverte"
 
 jour 2
-- Présentation et utilisation du plugin maven-bundle-plugin (+ nouveau bundle plugin?)
+- Présentation et utilisation du plugin maven-bundle-plugin
 - Gestion des versions (cycle de vie des livrables)
 - Déploiement (OSGi bundle repository)
 - Tests (pax exam etc...)
 
 TODO:
 jour 1
-Maven 00-06 TP 0 & TP 1
-* Maven 01: revoir schémas + explications et chiffres sonatype (wtf), parler de l'état actuel du projet /maven 3
-* Rajouter type bundle dans les différents types de projets (pom, jar, war etc...)
-* Correction typo "reprository"
-* Maven 04 -> TP0 => à adapter pour création d'un projet OSGi
-* Maven 06 
-Scope runtime bullet point "compilation et execution des tests"?
-Scope system (et exclusion?) : exemple dependance non OSGi embarquée en scope system vs OSGification avec bnd (adapter TP1? ex TP7 jdbc provider OSGi)
-* Maven 06 -> TP1 => à adapter avec projets OSGi (ex log-provider,log-consumer, jdbc provider ?)
+Maven 00-06 TP 0-1
+* Maven 01: Slide 2-6 à revoir (schéma, chiffres et évolutions des outils à actualiser)
+* Maven 04 -> TP0 => à adapter pour création d'un projet OSGi:
+   Projet simple avec une classe activator qui fait un hello world
+* Maven 06 -> TP1 => à adapter avec projets OSGi: 
+   Utiliser les projets de la formation OSGi log-provider et service-consumer
+   Centraliser les dépendances et configurations de plugin dans un projet parent
 
 jour 2
-Maven 07-15
-* Maven 08 Cartographie des plugins: ajouter maven-bundle-plugin (+ nouveau bundle plugin?)
-* Maven 08 -> TP 02 (compiler-plugin, jar-plugin, source-plugin, ear-plugin)=> replacer par création de projets servlet-consumer/servlet-provider + configuration maven-bundle-plugin 
-* Maven 09 -> TP 03/04 => à remplacer par deploiement felix/equinox via profiles? (TP pax exam)
-* Maven 10: Gestion de versions par rapport à OSGi (semantic versioning)
-* Maven 10 -> TP 05 => plugin release sur projet OSGi => demo
-* Maven 12: Execution des tests -> ajout Pax exam OSGi 
-(TP 9 OSGi -> ajout de la déclaration du profile maven pour felix/equinox dans l'énoncé? utilisation des bundles des TPs précédents ex: logservice provider?)
-* Maven 11 duplication de slide (4)
-* Maven 13-14 a fusionner (trop de jenkins)
-* Maven 13 -> TP 06 jenkins => à supprimer
-* Maven 14 -> TP 07 mvn site + sonar => à supprimer
-* TP en bonus télécharger sonar et faire un mvn sonar:sonar sur les projets ?
-
-A récupérer de la formation OSGi 
--> 04 resolver (directives manifest pour maven-bundle-plugin + range version OSGi)
--> 12 industrialisation maven-bundle-plugin + obr + pax exam
-
+Maven 07-12 TP 2-4
+* Maven 07 Cycle de construction à résumer en quelques bullet points + focus sur exemple du cycle de vie bundle?
+* Maven 08, TP2 utilisation compiler, jar, source et ear plugins => à remplacer par utilisation maven-bundle-plugin (à définir)
+* Maven 09, TP 3/4 => à remplacer par un TP3 deploiement felix/equinox via profiles
+   Prendre TP 09 OSGi sur Pax Exam
+   Ajouter la déclaration du profile maven pour felix/equinox dans l'énoncé
+   Lancer un test avec -Pfelix et -Pequinox
+* Maven 10, TP5 => à faire en demo à la place? utilisation du plugin release sur projet OSGi
+* Maven 11: Faire un TP 4: 
+   Reprendre la suite du TP 09 OSGi sur Pax Exam et implémenter les tests restants
+* Maven 12: Faire un TP 5 en bonus:
+   Télécharger sonar et faire un mvn sonar:sonar sur les projets
