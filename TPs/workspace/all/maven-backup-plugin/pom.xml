@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project>
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.zenika.plugins</groupId>
+   <artifactId>maven-backup-plugin</artifactId>
+   <packaging>maven-plugin</packaging>
+   <version>1.0</version>
+   <dependencies>
+      <dependency>
+         <groupId>org.codehaus.groovy</groupId>
+         <artifactId>groovy-all</artifactId>
+         <version>1.7.3</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.codehaus.groovy.maven</groupId>
+         <artifactId>gmaven-mojo</artifactId>
+         <version>1.0-rc-5</version>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.codehaus.groovy.maven</groupId>
+            <artifactId>gmaven-plugin</artifactId>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>generateStubs</goal>
+                     <goal>compile</goal>
+                     <goal>generateTestStubs</goal>
+                     <goal>testCompile</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </plugin>
+      </plugins>
+   </build>
+</project>
+

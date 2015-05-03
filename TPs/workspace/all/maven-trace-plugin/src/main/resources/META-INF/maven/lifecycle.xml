@@ -1,0 +1,17 @@
+<lifecycles>
+   <lifecycle>
+      <id>tracePackageCycle</id>
+      <phases>
+         <phase>
+            <id>package</id>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>trace</goal>
+                  </goals>
+               </execution>
+            </executions>
+         </phase>
+      </phases>
+   </lifecycle>
+</lifecycles>

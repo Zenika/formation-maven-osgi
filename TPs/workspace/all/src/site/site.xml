@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="RESANET">
+  <bannerLeft>
+    <name>Maven</name>
+    <href>http://maven.apache.org/</href>
+  </bannerLeft>
+  <body>
+    <menu ref="modules"/>
+    <menu ref="parent"/>
+    <menu ref="reports"/>
+  </body>
+</project>

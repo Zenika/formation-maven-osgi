@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zenika.formation</groupId>
+  <artifactId>resanet-ear</artifactId>
+  <packaging>ear</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>resanet-ear</name>
+
+  <parent>
+    <groupId>com.zenika.formation</groupId>
+    <artifactId>resanet-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+
+  <dependencies>
+    <dependency>
+      <groupId>com.zenika.formation</groupId>
+      <artifactId>resanet-web</artifactId>
+      <type>war</type>	
+    </dependency>
+  </dependencies>
+
+  <build>
+     <plugins>
+	<plugin>
+		<artifactId>maven-ear-plugin</artifactId>
+		<configuration>
+		   <modules>
+			<webModule>			
+			      <groupId>com.zenika.formation</groupId>
+			      <artifactId>resanet-web</artifactId>      
+			      <contextRoot>/zenika</contextRoot>
+			      <bundleFileName>resanet-formation.war</bundleFileName>				
+			</webModule>
+		  </modules>
+		  <finalName>resanet-ear</finalName>
+		</configuration>
+	</plugin>
+
+     </plugins>	
+
+  </build>
+</project>

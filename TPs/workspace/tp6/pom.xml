@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.zenika.formation</groupId>
+   <artifactId>resanet-parent</artifactId>
+   <packaging>pom</packaging>
+   <version>1.0-SNAPSHOT</version>
+   <name>resanet-parent</name>
+   <modules>
+      <module>resanet-tools</module>
+      <module>resanet-model</module>
+      <module>resanet-web</module>
+      <module>resanet-ear</module>
+  </modules>
+
+   <dependencyManagement>
+     <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>3.8.1</version>
+      </dependency>
+      <dependency>
+        <groupId>com.zenika.formation</groupId>
+        <artifactId>resanet-model</artifactId>
+	<version>${project.version}</version>
+      </dependency>
+      <dependency>
+       <groupId>com.zenika.formation</groupId>
+       <artifactId>resanet-web</artifactId>
+       <version>${project.version}</version>
+       <type>war</type>	
+      </dependency>
+     </dependencies>
+   </dependencyManagement>
+
+   <build>
+     	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>1.5</source>
+				<target>1.5</target>
+			</configuration>
+		</plugin>
+	</plugins>  
+   </build>
+
+   <profiles>
+      <profile>
+         <id>zenika-distribution</id>
+         <distributionManagement>
+            <snapshotRepository>
+               <id>zenika-repository</id>
+               <name>Zenika Repository</name>
+		<url>dav:http://localhost:8080/webdav/repo2</url> 
+            </snapshotRepository>
+	   <site>
+		<id>zenika-site-repository</id>
+	       <url>dav:http://localhost:8080/webdav/sites/</url> 
+	   </site>
+         </distributionManagement>
+      </profile>
+   </profiles>
+
+   <reporting>
+    <plugins>
+	<plugin>
+	  <groupId>org.codehaus.mojo</groupId>
+	  <artifactId>cobertura-maven-plugin</artifactId>
+        </plugin>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-pmd-plugin</artifactId>
+       </plugin>
+       <plugin>
+         <groupId>org.apache.maven.plugins</groupId>
+         <artifactId>maven-checkstyle-plugin</artifactId>
+       </plugin>
+       <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-javadoc-plugin</artifactId>
+	<configuration>
+	  <links>
+		<link>http://java.sun.com/j2se/1.5.0/docs/api</link>
+	 </links>	
+	</configuration>
+       </plugin>
+     </plugins>
+   </reporting>
+
+</project>

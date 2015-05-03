@@ -1,0 +1,2 @@
+os.name a la valeur : Mac OS X
+java.version a la valeur : 1.6.0_26
