@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.zenika.formation.osgi</groupId>
+	<artifactId>jdbc</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>OSGi :: JDBC Parent</name>
+	<modules>
+		<module>jdbc-provider</module>
+		<module>jdbc-consumer</module>
+	</modules>
+	<properties>
+		<compiler.version>2.4</compiler.version>
+		<source.version>1.7</source.version>
+		<target.version>1.7</target.version>
+		<bundle.plugin.version>2.3.7</bundle.plugin.version>
+		<osgi.core.version>5.0.0</osgi.core.version>
+		<osgi.compendium.version>4.3.1</osgi.compendium.version>
+		<h2.version>1.3.154</h2.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.core</artifactId>
+				<version>${osgi.core.version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.osgi</groupId>
+				<artifactId>org.osgi.compendium</artifactId>
+				<version>${osgi.compendium.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
