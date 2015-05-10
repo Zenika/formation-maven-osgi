@@ -12,22 +12,32 @@ TODO:
 jour 1
 Maven 00-06 TP 0-1
 * Maven 01: Slide 2-6 à revoir (schéma, chiffres et évolutions des outils à actualiser)
-* Maven 04 -> TP0 => à adapter pour création d'un projet OSGi:
-   Projet simple avec une classe activator qui fait un hello world
-* Maven 06 -> TP1 => à adapter avec projets OSGi: 
-   Utiliser les projets de la formation OSGi log-provider et service-consumer
-   Centraliser les dépendances et configurations de plugin dans un projet parent
+* Maven 04 -> TP0 => passer les versions des projets en 1.0.0-SNAPSHOT (au lieu de 1.0-SNAPSHOT)
+* Maven 06 -> TP1 => passer les versions des projets en 1.0.0-SNAPSHOT 
 
 jour 2
 Maven 07-12 TP 2-4
-* Maven 07 Cycle de construction à résumer en quelques bullet points + focus sur exemple du cycle de vie bundle?
-* Maven 08, TP2 utilisation compiler, jar, source et ear plugins => à remplacer par utilisation maven-bundle-plugin (à définir)
-* Maven 09, TP 3/4 => à remplacer par un TP3 deploiement felix/equinox via profiles
-   Prendre TP 09 OSGi sur Pax Exam
-   Ajouter la déclaration du profile maven pour felix/equinox dans l'énoncé
-   Lancer un test avec -Pfelix et -Pequinox
-* Maven 10, TP5 => à faire en demo à la place? utilisation du plugin release sur projet OSGi
-* Maven 11: Faire un TP 4: 
-   Reprendre la suite du TP 09 OSGi sur Pax Exam et implémenter les tests restants
-* Maven 12: Faire un TP 5 en bonus:
-   Télécharger sonar et faire un mvn sonar:sonar sur les projets
+* Maven 07: Cycle de construction à résumer en quelques bullet points + focus sur exemple du cycle de vie bundle?
+* Maven 08, TP2 => 
+    passer les versions des projets en 1.0.0-SNAPSHOT
+	rajouter les info de bundle dans resanet-tools (pour utilisation dans le tp4):
+	
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+	
+	<plugin>
+		<groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.3.7</version>
+			<extensions>true</extensions>
+            <configuration>
+				<instructions>
+					<Bundle-Activator>com.zenika.formation.internal.ExampleActivator</Bundle-Activator>
+                </instructions>
+			</configuration>
+	</plugin>
+ 
+* Maven 09, TP 3: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPs
+* Maven 10, TP5 => à supprimer, faire en demo à la place? utilisation du plugin release sur projet OSGi
+* Maven 11, TP 4: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPS
+* Maven 12 Faire un TP 5 en bonus?( ou demo?) Télécharger sonar et faire un mvn sonar:sonar sur les projets
