@@ -12,14 +12,12 @@ TODO:
 jour 1
 Maven 00-06 TP 0-1
 * Maven 01: Slide 2-6 à revoir (schéma, chiffres et évolutions des outils à actualiser)
-* Maven 04 -> TP0 => passer les versions des projets en 1.0.0-SNAPSHOT (au lieu de 1.0-SNAPSHOT)
-* Maven 06 -> TP1 => passer les versions des projets en 1.0.0-SNAPSHOT 
-
+  Les slides ont été revus
+  
 jour 2
 Maven 07-12 TP 2-4
 * Maven 07: Cycle de construction à résumer en quelques bullet points + focus sur exemple du cycle de vie bundle?
 * Maven 08, TP2 => 
-    passer les versions des projets en 1.0.0-SNAPSHOT
 	rajouter les info de bundle dans resanet-tools (pour utilisation dans le tp4):
 	
 	<version>1.0.0-SNAPSHOT</version>
@@ -41,3 +39,9 @@ Maven 07-12 TP 2-4
 * Maven 10, TP5 => à supprimer, faire en demo à la place? utilisation du plugin release sur projet OSGi
 * Maven 11, TP 4: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPS
 * Maven 12 Faire un TP 5 en bonus?( ou demo?) Télécharger sonar et faire un mvn sonar:sonar sur les projets
+
+* Changer les numeros de TPs 
+* Ajouter SLF4J-Log4J dans les ressources du TP3 pour éviter
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
