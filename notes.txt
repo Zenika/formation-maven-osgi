@@ -25,7 +25,6 @@ Maven 07-12 TP 2-4
 * Maven 11, TP 4: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPS
 * Maven 12 Faire un TP 5 en bonus?( ou demo?) Télécharger sonar et faire un mvn sonar:sonar sur les projets
 
-* Changer les numeros de TPs 
 * Ajouter SLF4J-Log4J dans les ressources du TP3 pour éviter
 SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
