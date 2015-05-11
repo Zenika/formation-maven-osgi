@@ -13,28 +13,13 @@ jour 1
 Maven 00-06 TP 0-1
 * Maven 01: Slide 2-6 à revoir (schéma, chiffres et évolutions des outils à actualiser)
   Les slides ont été revus
-  
+
 jour 2
 Maven 07-12 TP 2-4
 * Maven 07: Cycle de construction à résumer en quelques bullet points + focus sur exemple du cycle de vie bundle?
-* Maven 08, TP2 => 
+  Les slides ont été revus: il ne reste que le slide sur le default lifecycle (pour présenter les étapes), le jar et pom lifecycle (pour montrer comment sont greffées les plugin). Un bundle lifecycle a été ajouté.
+* Maven 08, TP2 =>
 	rajouter les info de bundle dans resanet-tools (pour utilisation dans le tp4):
-	
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>bundle</packaging>
-	
-	<plugin>
-		<groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <version>2.3.7</version>
-			<extensions>true</extensions>
-            <configuration>
-				<instructions>
-					<Bundle-Activator>com.zenika.formation.internal.ExampleActivator</Bundle-Activator>
-                </instructions>
-			</configuration>
-	</plugin>
- 
 * Maven 09, TP 3: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPs
 * Maven 10, TP5 => à supprimer, faire en demo à la place? utilisation du plugin release sur projet OSGi
 * Maven 11, TP 4: fait dans répertoire TP3-4, à valider et déplacer avec les autres TPS
