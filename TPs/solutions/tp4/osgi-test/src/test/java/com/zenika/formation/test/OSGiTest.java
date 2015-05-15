@@ -33,10 +33,10 @@ public class OSGiTest {
 	@Configuration
 	public static Option[] configuration() {
 		return options(
+				systemProperty("org.ops4j.pax.logging.DefaultServiceLog.level").value("WARN"),
 				mavenBundle("org.osgi", "org.osgi.compendium", "4.3.1").noStart(),
 				mavenBundle("com.zenika.formation", "resanet-tools", "1.0.0-SNAPSHOT"),
 				mavenBundle("com.zenika.formation.osgi", "jdbc-provider", "1.0.0-SNAPSHOT"),
-				wrappedBundle(mavenBundle("javax.servlet", "servlet-api", "2.5")).noStart(),
 				junitBundles(),
 				vmOption("-Xmx512m")
 		);

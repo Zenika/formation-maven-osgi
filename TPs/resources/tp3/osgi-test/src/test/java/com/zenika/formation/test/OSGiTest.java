@@ -23,7 +23,10 @@ public class OSGiTest {
 	
 	@Configuration
 	public static Option[] configuration() {
-		return options(junitBundles());
+		return options(
+			systemProperty("org.ops4j.pax.logging.DefaultServiceLog.level").value("WARN"),
+			junitBundles()
+		);
 	}
 
 	@Test

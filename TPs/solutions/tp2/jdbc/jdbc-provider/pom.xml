@@ -42,7 +42,10 @@
 				<artifactId>maven-bundle-plugin</artifactId>
 				<configuration>
 					<instructions>
-						<Import-Package>org.apache.lucene.*;resolution:=optional, *</Import-Package>
+						<Import-Package>
+							org.apache.lucene.*;resolution:=optional,
+							javax.servlet.*;resolution:=optional,
+							*</Import-Package>
 						<Embed-Dependency>h2;inline=true</Embed-Dependency>
 						<Bundle-Activator>com.zenika.formation.jdbc.provider.internal.Activator</Bundle-Activator>
 					</instructions>
