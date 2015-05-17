@@ -10,29 +10,26 @@ import com.zenika.formation.ExampleService;
  * Internal implementation of our example OSGi service
  */
 public final class ExampleServiceImpl
-    implements ExampleService
-{
+    implements ExampleService {
     // implementation methods go here...
 
-    public String scramble( String text )
-    {
-        List charList = new ArrayList();
+    public String scramble(String text) {
+        List<Character> charList = new ArrayList<Character>();
 
         char[] textChars = text.toCharArray();
-        for( int i = 0; i < textChars.length; i++ )
-        {
-            charList.add( new Character( textChars[i] ) );
+        for (char textChar : textChars) {
+            charList.add(textChar);
         }
 
-        Collections.shuffle( charList );
+        Collections.shuffle(charList);
 
         char[] mixedChars = new char[text.length()];
-        for( int i = 0; i < mixedChars.length; i++ )
-        {
-            mixedChars[i] = ( (Character) charList.get( i ) ).charValue();
+        for (int i = 0; i < mixedChars.length; i++) {
+            mixedChars[i] = charList.get(i);
         }
 
-        return new String( mixedChars );
+        return new String(mixedChars);
     }
 }
+
 

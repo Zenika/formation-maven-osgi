@@ -10,6 +10,6 @@
     <source>src/test/java/internal/ExampleServiceImplTest.java</source>
   </testSources>
   <testResources>
-    <resource>src/test/resources/readme.txt</resource>
+    <resource>src/test/resources/log4j.properties</resource>
   </testResources>
 </archetype>

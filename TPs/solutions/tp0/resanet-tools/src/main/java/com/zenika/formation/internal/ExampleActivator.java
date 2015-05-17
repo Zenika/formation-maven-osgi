@@ -12,32 +12,30 @@ import com.zenika.formation.ExampleService;
  * Extension of the default OSGi bundle activator
  */
 public final class ExampleActivator
-    implements BundleActivator
-{
+    implements BundleActivator {
+
     /**
      * Called whenever the OSGi framework starts our bundle
      */
-    public void start( BundleContext bc )
-        throws Exception
-    {
-        System.out.println( "STARTING com.zenika.formation" );
+    public void start(BundleContext bc)
+        throws Exception {
+        System.out.println("STARTING com.zenika.formation");
 
         Dictionary props = new Properties();
         // add specific service properties here...
 
-        System.out.println( "REGISTER com.zenika.formation.ExampleService" );
+        System.out.println("REGISTER com.zenika.formation.ExampleService");
 
         // Register our example service implementation in the OSGi service registry
-        bc.registerService( ExampleService.class.getName(), new ExampleServiceImpl(), props );
+        bc.registerService(ExampleService.class.getName(), new ExampleServiceImpl(), props);
     }
 
     /**
      * Called whenever the OSGi framework stops our bundle
      */
-    public void stop( BundleContext bc )
-        throws Exception
-    {
-        System.out.println( "STOPPING com.zenika.formation" );
+    public void stop(BundleContext bc)
+        throws Exception {
+        System.out.println("STOPPING com.zenika.formation");
 
         // no need to unregister our service - the OSGi framework handles it for us
     }
